@@ -3,11 +3,14 @@ all: Simorg
 
 Simorg: main.cpp 
 	g++ main.cpp -o Simorg 
-	./Simorg -f envs/simple1.txt
 
 random:
 	g++ main.cpp -o Simorg 
 	./Simorg
+
+file1: 
+	g++ main.cpp -o Simorg 
+	./Simorg -f envs/simple1.txt
 
 file2: 
 	g++ main.cpp -o Simorg 
