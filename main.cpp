@@ -74,6 +74,7 @@ void buildEnv( const std::string filename, Simorg& env ){
   std::ifstream file( filename.c_str(), std::ios::in ); 
   if( !file.good() ) { 
     printf("Error: Issue with opening file \"%s\"\n", filename.c_str()); 
+    exit(1); 
   }
   char cellStateBuffer; 
   bool cellState; 
@@ -85,6 +86,7 @@ void buildEnv( const std::string filename, Simorg& env ){
         env.setState(cellState, 1, r, c); 
       } else { 
         printf("Error: I/O issue reading the file \"%s\"\n",filename.c_str()); 
+        exit(1); 
       }
     }
   }
